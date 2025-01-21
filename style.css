@@ -1,0 +1,238 @@
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    background: url("backgoundimg.avif") no-repeat center center fixed;
+
+    /* background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; */
+
+    background-size: cover;
+    opacity: 0.9; /* Slight transparency */
+}
+
+
+
+
+body{
+    background-color:rgba(40, 204, 171, 0.743);
+    text-align: center;
+    font-family: sans-serif;
+
+    background-color: #a1c4fd;
+
+
+}
+
+
+
+h1{
+    margin-top:10vh;
+    font-size: 120px;
+    font-weight:bolder;
+    /* color:rgb(209, 227, 111); */
+    /* color:black; */
+    color: #FFD700;
+}
+
+.container{
+    height: 70vh;
+
+    /* as game box are to be align center of page */
+    display:flex;
+
+    justify-content: center;
+    align-items: center;
+
+
+
+    
+}
+
+.game{
+    height:60vmin;
+    width:60vmin;
+
+    /* as boxes are not align property for it...  */
+    display:flex;
+    flex-wrap:wrap;
+    /* it mean if does not have space for box in game box go to next line mean boxes to next line. */
+
+    justify-content: center;
+    align-items: center;
+    
+    gap: 2vmin;
+
+}
+
+.box{
+    height:18vmin;
+    width:18vmin;
+
+    border:none;
+    border-radius: 1rem;
+
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.7);
+
+    font-size: 8vmin;
+
+    color:red;
+    background-color: rgba(238, 240, 194, 0.928)
+}
+
+button:hover {
+    background-color: #FFD700; /* Gold */
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+
+#reset{
+    padding:1rem;
+    font-size:1.25rem;
+    border-radius: 1rem;
+    background-color: #d6ea75;
+    color:black;
+    font-weight: 700;
+}
+
+
+
+
+
+/* .msg-box{
+    height:15vmin;
+    margin:1vh 0 0 0;
+
+} */
+.msg-container{
+    height:30vmin;
+    animation: fadeIn 1s ease-in-out;
+
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#new-btn{
+    padding:1rem;
+    font-size:1.25rem;
+    border-radius: 1rem;
+    background-color: black;
+    color:white;
+
+    cursor:pointer;
+}
+#msg{
+    color:black;
+    /* color:#FFD700; */
+    font-size:8vmin;
+    font-weight: 900;
+
+}
+.hide{
+    display:none;
+}
+
+/* responsive for mobile  */
+@media (max-width: 600px) {
+    .box {
+        height: 15vmin;
+        width: 15vmin;
+    }
+    h1 {
+        font-size: 50px;
+    }
+}
+
+
+
+
+/*1. transform: scale(1.1)
+The transform property applies a transformation to an element.
+ The scale function specifically changes the size of the element.
+scale(1.1) increases the element's size by 10% (1.0 is the default 
+size; 1.1 scales it up by 10%).
+
+
+2. transition: 0.3s
+The transition property specifies the duration of the change, 
+making it smooth rather than abrupt.
+0.3s means the transition takes 0.3 seconds to complete.
+Without transition, the scaling effect would happen instantly, 
+which can look jarring.
+
+Together in Action
+When combined, transform: scale(1.1) and transition: 0.3s make the element 
+grow smoothly over 0.3 seconds when hovered over. This enhances user interaction by making the element feel more dynamic and responsive.
+
+
+The **`opacity`** property in CSS controls the transparency level of an element, making it more or less visible. It accepts values ranging from `0` (completely transparent) to `1` (completely opaque).
+
+How `opacity` Works**
+- **`opacity: 1;`** → Fully visible (default).
+- **`opacity: 0;`** → Completely invisible.
+- **`opacity: 0.5;`** → 50% transparency (semi-transparent).
+
+Usage Example**
+```css
+
+
+// Fully visible 
+.visible {
+    opacity: 1;
+}
+
+// Semi-transparent 
+.semi-transparent {
+    opacity: 0.5;
+}
+
+// Hidden 
+
+.hidden {
+    opacity: 0;
+}
+```
+
+Practical Application**
+1. **Fading Effects:**
+   Combine `opacity` with the `transition` property to create fade-in or fade-out animations:
+   ```css
+   .fade {
+       opacity: 0;
+       transition: opacity 0.5s;
+   }
+
+   .fade.visible {
+       opacity: 1;
+   }
+   ```
+
+2. **Hover Effects:**
+   Example: Make a button more visible when hovered over:
+   ```css
+   button {
+       opacity: 0.7;
+       transition: opacity 0.3s;
+   }
+
+   button:hover {
+       opacity: 1;
+   }
+   ```
+
+Visual Impact
+The `opacity` property is widely used in web design to:
+- Create **hover effects**.
+- Adjust **image transparency**.
+- **Layer elements** with varying visibility to add depth.
+
+*/
